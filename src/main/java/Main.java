@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.lang.Thread;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -56,5 +57,9 @@ public class Main {
             fw.write(elements.get(i).getText() + "\n");
         }
         fw.close();
+        ArrayList<String> result = ReadTxt.reader("C:\\Users\\5\\Desktop\\loginandpassword.txt");
+        for (int i = 0; i < result.size(); i++) {
+            System.out.println(result.get(i));
+        }
     }
 }
